@@ -8,6 +8,8 @@ list_box = py.Listbox(values=functions.get_todos(), key='todos',
                       enable_events=True, size=[45, 10])
 edit_button = py.Button("Edit")
 
+button_labels = ["Close", "Apply"]
+
 window = py.Window('My TO-DO App',
                    layout=[[label], [input_box], [add_button],
                            [list_box, edit_button]],
@@ -41,4 +43,5 @@ while True:
         case py.WIN_CLOSED:
             break
 
+print("Bye")
 window.close()
