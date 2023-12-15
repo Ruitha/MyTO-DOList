@@ -7,12 +7,14 @@ py.theme("DarkTeal4")
 clock = py.Text(' ', key='clock')
 label = py.Text("Type in a to-do")
 input_box = py.InputText(tooltip="Enter to-do", key="todo")
-add_button = py.Button("Add")
+add_button = py.Button(size=10, image_source="add.png", mouseover_colors="LightBlue2",
+                       tooltip="Add Todo", key="Add")
 # noinspection PyTypeChecker
 list_box = py.Listbox(values=functions.get_todos(), key='todos',
                       enable_events=True, size=[45, 10])
 edit_button = py.Button("Edit")
-complete_button = py.Button("Complete")
+complete_button = py.Button(size=10, image_source="complete.png", mouseover_colors="LightBlue2",
+                            tooltip="Complete Todo", key="Complete")
 exit_button = py.Button("Exit")
 
 button_labels = ["Close", "Apply"]
