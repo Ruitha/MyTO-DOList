@@ -1,6 +1,11 @@
 import functions
 import PySimpleGUI as py
 import time
+import os
+
+if not os.path.exists("todos_item.txt"):
+    with open("todos_item.txt", 'w') as file:
+        pass
 
 py.theme("DarkTeal4")
 
